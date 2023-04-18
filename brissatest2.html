@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>17/4/2023</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3792e415-d048-43a6-a4f4-ff3bf671c33b" class="page sans"><header><h1 class="page-title">17/4/2023</h1></header><div class="page-body"><div id="838e49f6-b0b4-43d9-b27d-d3dd8ae4f92f" class="column-list"><div id="6164ea86-01ca-4d34-9cca-6c57dcb64753" style="width:50%" class="column"><h2 id="766bc4ca-5b71-4a99-9a7b-8e92dbafe793" class="block-color-yellow_background">TEST 2 - T1</h2><p id="a5d08d1d-dc98-4323-926e-115f13f6d998" class="">The given graph illustrates the number of visitors of an specific Caribbean island between 2010 and 2017, <span style="border-bottom:0.05em solid">and whether they stayed on cruise ships or on the island</span>. The number of tourists is measured in millions.</p><p id="53836bcb-449d-4a2d-bbd3-827225d43b6b" class="">Overall, the total figure of tourists visiting the Caribbean island displayed a steady growth <span style="border-bottom:0.05em solid">in the period under study</span>. Similarly, the number of visitors who opted for staying on cruise ships also increased over the years<span style="border-bottom:0.05em solid">, except</span> for 2012 when it fell to less than half a million. Conversely, the figure for tourists staying on the island has been constant at 1.5 million or lower.</p><p id="563c7ce5-1c21-479f-b8c2-1e290e299e2a" class="">3.5 million visitors arrived in the Caribbean island in 2017, which represents more than three times the number of tourists in 2010. Interestingly, in the first year of study, most of people favoured finding accommodation on the island rather than staying on cruise ships, namely more <span style="border-bottom:0.05em solid">than half a million against less than half a million</span>. Nonetheless, this trend started to change in 2016, when more than half the total visitors (1.5 millions) preferred to spend the night at cruise ships rather than staying on the island (more than 1 million).</p><p id="3f61dd28-12d4-43fe-b4ea-05a90d13a63f" class="">The number of people preferring accommodation at cruise ships reached a peak in 2017 with 2 million visitors. Meanwhile, tourists staying on the Caribbean island hit a high of 1.5 million people from 2013 to 2015 and again in 2017.</p><p id="21b4105d-8ed2-420c-aedd-4526ee6f10ed" class="">
+</p><p id="4b1f0638-3fb8-43c4-85ed-6670ece94b30" class="">Task achievement: 7
+Coherence and cohesion: 7*
+Lexical resource: 8
+Grammatical range and accuracy: 8
+OVERALL: 7.5</p></div><div id="fa5a6cfe-095e-4bf3-8dc7-22474abcd33a" style="width:50.00000000000002%" class="column"><h2 id="0d7d5e59-71a9-492f-be93-61281582ae9f" class="block-color-yellow_background">PROPOSED</h2><p id="a1934d9a-c7b5-4b3f-9960-97298dbb5335" class="">The given graph illustrates the number of visitors of an specific Caribbean island between 2010 and 2017, <span style="border-bottom:0.05em solid">categorized by their choice of accommodation - either on cruise ships or on the island</span>. The number of tourists is measured in millions.</p><p id="b05d11ce-924c-49b9-b08e-9aab7ea73d7b" class="">Overall, the total figure of tourists visiting the Caribbean island displayed a steady growth during <span style="border-bottom:0.05em solid">the period under consideration.</span> Similarly, the number of visitors who opted for staying on cruise ships also increased over the years, <span style="border-bottom:0.05em solid">with the exception of</span> 2012 when it fell to less than half a million. Conversely, the figure for tourists staying on the island has been constant at 1.5 million or lower.</p><p id="b24e1593-03bf-49d6-b283-adcb6fcbfe02" class="">3.5 million visitors arrived in the Caribbean island in 2017, which represents more than three times the number of tourists in 2010. Interestingly, in the first year of study, <span style="border-bottom:0.05em solid">more than half a million people preferred finding accommodation on the island, in contrast to less than half a million who stayed on cruise ships</span>. Nonetheless, this trend started to change in 2016, when more than half the total visitors (1.5 millions) preferred to spend the night at cruise ships rather than staying on the island (more than 1 million).</p><p id="fbb3c899-af75-43ab-bef8-773a98f681b4" class="">The number of people preferring accommodation at cruise ships reached a peak in 2017 with 2 million visitors. Meanwhile, tourists staying on the Caribbean island hit a high of 1.5 million people from 2013 to 2015 and again in 2017.</p><p id="3370485d-d333-4a25-a95c-fc1b130de96f" class="">
+</p><p id="8bb94d1b-789c-41b6-a0b9-4632861a7df9" class="">Task achievement: 8</p><p id="bc9cba32-d2ee-44e8-96f0-993cfe2cab19" class="">Coherence and cohesion: 9</p><p id="60d095b4-65d2-484a-890b-e7c12f28d070" class="">Lexical resource: 8</p><p id="a48f0000-f91e-469d-9959-2ca3ff5fb0e8" class="">Grammatical range and accuracy: 8</p><p id="9832d9f5-7479-474a-bfe4-f782edcd12f7" class="">OVERALL: 8 </p><p id="e007c569-9069-4b95-8216-cfbe6bd04896" class="">
+</p></div></div><hr id="7b1df8d6-1fa1-49e1-a561-2180f76d5632"/><div id="64fd437e-f17c-4db6-87f0-dad9ce4eae99" class="column-list"><div id="e6cf1e69-ae42-4302-a018-614e7f19f9ae" style="width:50%" class="column"><h2 id="c8cd4068-499c-4d88-a915-b87f5180ae37" class="block-color-yellow_background"><mark class="highlight-yellow_background"><strong>TEST 2 - T2</strong></mark></h2><p id="6b7eefb2-a6f8-48fa-a46a-9b21e59bce4a" class=""><span style="border-bottom:0.05em solid">Newspapers and books will not be printed in the future because everybody will read everything they wish online for free.</span> In this essay, I will argue that I do not agree with this idea because some people still prefer printed materials over online reading. Also, I will defend that companies <span style="border-bottom:0.05em solid">will continue to</span> profit from their online products. (statements is not well introduced, sentences are quite long still)</p><p id="8d68f39d-d8cd-49f8-942e-8e1c12f44efb" class=""><span style="border-bottom:0.05em solid">The development of technology and internet</span> has allowed consumers to have access to <span style="border-bottom:0.05em solid">a wide variety of products in a faster and even cheaper manner.() Among these products are books and newspapers, which can be found and read online.</span> (Nowadays, readers are able to choose among a greater number of national and international newspapers as well as books thanks to the internet.) Nonetheless, some readers are still loyal to printed editions because of the nostalgic feeling that they are in physical contact with the paper. Additionally, reading from a screen has been proved to be extremely tiring to most people as they grow older. (supported and gives counterarguments, repetitive ideas)</p><p id="8f864cd6-565c-40cb-ad6a-c590142f3bf2" class="">On top of the above, <span style="border-bottom:0.05em solid">it is not true that online material can be reached for free</span>. Printing houses have realised the market changes and, therefore, are investing in making profits out of virtual products too. Currently, consumers have to pay in order to read the full version of a news clipping or an opinion peace on news websites. <span style="border-bottom:0.05em solid">Although the fees are</span> slightly more affordable, it cannot be stated that printing houses are giving away online books or kindle versions free of charge. In this sense, there is <span style="border-bottom:0.05em solid">not reason</span> to think that this situation will change in the years to come since <span style="border-bottom:0.05em solid">companies exist to make money.</span></p><p id="ce72f599-d153-48ab-8a7a-b0f36d8e41ca" class="">In conclusion, I disagree with the statement that people will read everything virtually for free in the future, since companies will continue to charge for their online reading materials. Furthermore, there will always be people who will feel more comfortable reading printed books and newspapers.</p><p id="5e4dd5f1-21a1-490c-8eb4-ffc631a940cf" class="">
+</p><p id="422b481b-97da-43be-a9e9-d28c285137d7" class="">Task achievement: 8
+Coherence and cohesion: 7
+Lexical resource: 7
+Grammatical range and accuracy: 8
+OVERALL: 7.5</p></div><div id="7b279c60-8b43-4b1d-a249-3554ec031773" style="width:50%" class="column"><h2 id="d1098bdb-92de-413d-8dc8-2220188cd138" class="block-color-yellow_background">PROPOSED</h2><p id="797ac70b-f84a-4a12-ad0a-5ff3e558cc93" class=""><span style="border-bottom:0.05em solid"><strong>It has been suggested that in the future, people will not buy printed newspapers or books since they will be able to read everything online for free.</strong></span> In this essay, I will argue that I do not agree with this idea because some people still prefer printed materials over online reading. Also, I will defend that companies will continue to profit from their online products.</p><p id="36571507-dc4d-47d6-9e65-02f043ba008f" class=""><strong>Undoubtedly, The development of technology</strong> and internet has allowed consumers to have access to <span style="border-bottom:0.05em solid"><strong>a plethora of products in a quicker and more cost-effective manner, including these products are books and newspapers, which can be found and read online.</strong></span> Nonetheless, some readers are still loyal to printed editions because of the nostalgic feeling that they are in physical contact with the paper. <span style="border-bottom:0.05em solid">Furthermore</span>, reading from a screen has been proved to be extremely tiring to most people as they grow older.</p><p id="ee84c8ed-5591-492a-8687-5c6f8fb42458" class="">On top of the above, <span style="border-bottom:0.05em solid"><strong>the idea that online material is accessible for free is not entirely accurate</strong></span>. Printing houses have realised the market changes and, therefore, are investing in making profits out of virtual products too. Currently, consumers have to pay in order to read the full version of a news clipping or an opinion peace on news websites. Although the fees are slightly more affordable, it cannot be stated that printing houses are giving away online books or kindle versions free of charge. In this sense, there is not reason to think that this situation will change in the years to come since companies exist to make money.</p><p id="91de1448-2c93-4e44-a13f-88b8150e33e6" class="">It can be concluded that despite the accessibility and convenience of digital products, there will always be individuals who prefer reading printed materials. Furthermore, companies will continue to charge for their online reading materials, ensuring that the market remains profitable.</p><p id="c7be6d29-8b2c-4ecc-aa4f-7b1b20d9ec39" class="">
+</p><p id="2c5ef511-6e04-4110-95b2-049a0c4794ac" class="">Task achievement: 8</p><p id="c6ba00ad-b1a3-483f-bb72-dc138bbc8499" class="">Coherence and cohesion: 8</p><p id="10aa5c52-2e57-4b40-9f80-c6bd7830d0ed" class="">Lexical resource: 8</p><p id="43c8b044-97ce-4159-a7a4-7db0def37164" class="">Grammatical range and accuracy: 8</p><p id="820c66b9-6d65-4a8c-a152-dd766ed9a783" class="">OVERALL: 8 </p><p id="ef9696ed-f519-48b5-a6d9-94a3a647330e" class="">
+</p></div></div><p id="a655923b-b0e0-452c-a145-f8e712813fe1" class="">
+</p></div></article></body></html>
