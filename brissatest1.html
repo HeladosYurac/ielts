@@ -1,0 +1,693 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>10/4/2023</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3792e415-d048-43a6-a4f4-ff3bf671c33b" class="page sans"><header><h1 class="page-title">10/4/2023</h1></header><div class="page-body"><div id="838e49f6-b0b4-43d9-b27d-d3dd8ae4f92f" class="column-list"><div id="6164ea86-01ca-4d34-9cca-6c57dcb64753" style="width:50%" class="column"><h2 id="766bc4ca-5b71-4a99-9a7b-8e92dbafe793" class="block-color-yellow_background">TEST 1 - T1</h2><p id="a5d08d1d-dc98-4323-926e-115f13f6d998" class="">The given bar chart presents the results of a survey conducted in order to know the coffee and tea buying and drinking habits of people living in five Australian cities in the last 4 weeks. </p><p id="93c90e51-1da3-43c5-ae0d-6a0b7cbce1f8" class=""><strong><mark class="highlight-red_background">(good introduction) (sentence is too long)</mark></strong>
+
+Overall, most people went to a coffee shop to have coffee or tea in all the Australian cities, except for Adelaide, where a slight majority preferred to buy instant coffee. On the other hand, least people opted for buying fresh coffee in all the five cities.<strong><mark class="highlight-red_background">
+</mark></strong></p><p id="9522cf4b-9ca2-41f2-acc9-83bcf109c731" class=""><mark class="highlight-red_background"><strong>(great report but there are repetitions, on the other hand is A2 expression)</strong></mark>
+
+More than 60% of respondents in Sydney, Melbourne and Hobart decided to have coffee or tea at a café, whereas less than 50% of people in Adelaide preferred this option. As for fresh coffee, less than 45% of people in all the cities bought this product in the las four weeks.</p><p id="0480f2bd-0a56-4347-8af8-d3c68e440c80" class=""><mark class="highlight-red_background"><strong>  (#% make the paragraph look disorganised, basic conjunct</strong></mark>ions)
+
+Conversely, the share of citizens who decided to purchase instant coffee shows little variety across the cities, oscillating between just over 45% in Sydney and almost 55% in H<strong>obart. </strong></p><p id="709b7254-04d1-4691-8113-473d8aa0c52f" class=""><mark class="highlight-red_background"><strong>(Detail which cities)</strong></mark></p><p id="9b5f0224-93b1-49bb-8492-91295d483807" class="">
+</p><p id="dafb99e8-0e1e-46f0-a70f-d2dd4e796544" class="">Task Achievement: 8</p><p id="8c13ce2c-a0b2-40bc-8f7c-e43eaf42ca2f" class="">Coherence and Cohesion:7</p><p id="809e1f82-055a-4ba8-892d-34acc774ecc2" class="">Lexical Resource: 7</p><p id="5eda0e0b-8877-466e-965a-0c0ccd3e448a" class="">Grammatical Range and Accuracy: 7</p><p id="395b5f34-9663-453b-a29a-7be5f910a004" class=""><strong>Overall: 7</strong></p></div><div id="fa5a6cfe-095e-4bf3-8dc7-22474abcd33a" style="width:50.00000000000002%" class="column"><h2 id="0d7d5e59-71a9-492f-be93-61281582ae9f" class="block-color-yellow_background">PROPOSED</h2><p id="a1934d9a-c7b5-4b3f-9960-97298dbb5335" class="">The given bar chart presents the results of a survey conducted to assess the coffee and tea buying and drinking habits of people in five Australian. The information is based on a survey conducted over a period of four weeks. 
+
+Overall, it is clear that most consumers preferred to purchase coffee or tea at a coffee shop, except in Adelaide, where a slight majority favoured buying instant coffee<span style="border-bottom:0.05em solid">. Meanwhile, </span>fresh coffee was the least popular option across all the cities surveyed.
+
+The highest proportion of respondents who opted for coffee or tea at a café were from Sydney, Melbourne, and Hobart, where over 60% of respondents preferred this option. <span style="border-bottom:0.05em solid">In contrast,</span><mark class="highlight-teal"><strong> less than half of the respondents</strong></mark> in Adelaide chose to go to a café for their coffee or tea. <span style="border-bottom:0.05em solid">Furthermore</span>, fresh coffee was purchased by less than 45% of people in all cities surveyed.
+
+<span style="border-bottom:0.05em solid">Conversely,</span> the percentage of people who bought instant coffee shows little variety across all five cities, ranging from just over 45% in Sydney to almost 55% in H</p><p id="f062188b-c769-4156-bb1c-deb619c5cb4a" class="">
+</p><p id="0d36964f-c208-4498-92f4-2b7f559f4af4" class="">Task Achievement: 8</p><p id="c3655e6e-10d5-4de1-a5d8-113350eac256" class="">Coherence and Cohesion:8</p><p id="ad486e2b-c528-449e-87fd-328656fca0d1" class="">Lexical Resource: 8</p><p id="2f896d3e-ceff-4ab3-ae5c-66b5dbdbfe5f" class="">Grammatical Range and Accuracy: 8</p><p id="2df58cd1-3108-4ca9-afcd-c5786f884860" class=""><strong>Overall: 8</strong></p><p id="e007c569-9069-4b95-8216-cfbe6bd04896" class="">
+</p></div></div><hr id="7b1df8d6-1fa1-49e1-a561-2180f76d5632"/><div id="64fd437e-f17c-4db6-87f0-dad9ce4eae99" class="column-list"><div id="e6cf1e69-ae42-4302-a018-614e7f19f9ae" style="width:50%" class="column"><h2 id="c8cd4068-499c-4d88-a915-b87f5180ae37" class="block-color-yellow_background"><mark class="highlight-yellow_background"><strong>TEST 1 - T2</strong></mark></h2><p id="6b7eefb2-a6f8-48fa-a46a-9b21e59bce4a" class="">People in some countries consider <strong><mark class="highlight-teal_background">owing a home</mark></strong> is more important than renting one. In this essay, I will explain the reasons why this happens and defend why I believe this is a negative situation.</p><p id="487117cc-a628-44dd-b9ed-186c6f6ae30b" class="">In most countries, having a property used to give past generations the idea that they were settling down to start a family. This notion has been inherited to our generation, who has been traditionally taught that owing a property is a sign of well-fare. <span style="border-bottom:0.05em solid">Howeve</span>r, reality has changed over the years and, nowadays, owing a home only represents a sign <span style="border-bottom:0.05em solid">of richness</span> because of the increase in real estate prices. <span style="border-bottom:0.05em solid">Despite this</span>, in some countries, people are still struggling to save up as much money as possible in order to pay loans to acquire an <span style="border-bottom:0.05em solid">apartment owing to this</span> traditional view that having a home is crucial to life.</p><p id="ad75a24f-92b7-4e49-b136-6402f9da4d1e" class="">In my point of view, the above is a negative situation given to the fact that it creates frustration among younger generations whose salaries may not be sufficient to purchase a property<span style="border-bottom:0.05em solid">. Moreover</span>, I consider that renting a home is always a good option for those who would rather live with more flexibility. Currently, young adults prefer to travel around the world rather than standing still in one city for most of their lives. <span style="border-bottom:0.05em solid">Therefore</span>, paying a rent instead of a property loan suits their life style in a more efficient manner, since they will be able to move out every time they wish.</p><p id="7482adae-7161-414b-ab72-31c393efcac0" class="">In conclusion, I think <span style="border-bottom:0.05em solid">that owing a home</span> rather than renting one is a negative trend, specially for young generations who may get frustrated for not being able to buy a property.</p><p id="6f0c79a0-b95e-4fb5-a2f6-b389264118a5" class="">
+</p><p id="7752a0fc-ca5b-453e-bc9b-b2b814428eaa" class="">Task Achievement: 8.
+Coherence and Cohesion: 7
+Lexical Resource: 5
+Grammatical Range and Accuracy: 7
+Overall: 6.5</p></div><div id="7b279c60-8b43-4b1d-a249-3554ec031773" style="width:50%" class="column"><h2 id="d1098bdb-92de-413d-8dc8-2220188cd138" class="block-color-yellow_background">PROPOSED</h2><p id="797ac70b-f84a-4a12-ad0a-5ff3e558cc93" class="">In some countries, it is considered more important <span style="border-bottom:0.05em solid">to own a home </span>than to rent one. In this essay, I will explore the reasons for this and argue that while there are some benefits <span style="border-bottom:0.05em solid">to owning a home</span>, overall, it is a negative trend.</p><p id="8965282a-044b-4f35-b135-985037a14769" class="">Historically, <span style="border-bottom:0.05em solid">owning a home</span> was seen as a sign of stability and prosperity. This belief has been passed down to subsequent generations, with many people still viewing <span style="border-bottom:0.05em solid">property ownership</span> as a necessary milestone in life. However, in many countries, soaring real estate prices have made it difficult for people to purchase homes without taking on significant debt.</p><p id="4a7d8e8f-3152-4f39-bfde-78a965fc932e" class="">While there are some advantages <span style="border-bottom:0.05em solid">to owning a home</span>, such as having a sense of security and the ability to customize one&#x27;s living space, there are also many drawbacks. For example, <span style="border-bottom:0.05em solid">home ownership</span> can tie people down to a particular location, limiting their ability to move for work or personal reasons. Additionally, property ownership often comes with high maintenance costs, property taxes, and mortgage payments that can put a strain on one&#x27;s finances.</p><p id="4aba69cc-2583-4db4-8f65-f7679234ccb8" class="">Furthermore, the idea that owning a home is always the better choice ignores the benefits of renting. For many people, renting allows for greater flexibility and the ability to move frequently, which is important for those who value experiences over material possessions. Renting can also be a more cost-effective option, especially in expensive housing markets where <span style="border-bottom:0.05em solid">home ownership</span> is out of reach for many.</p><p id="e687e509-77fa-4c11-889d-9cdfdaa08269" class="">In conclusion, <span style="border-bottom:0.05em solid">while owning a home</span> may be desirable for some, it is not necessarily the best choice for everyone. The cultural belief that <span style="border-bottom:0.05em solid">property ownership</span> is essential can lead to financial stress and limit one&#x27;s options for personal and professional growth. Ultimately, the decision of whether to rent or buy should be based on individual circumstances and priorities.</p><p id="cca946cb-13be-4734-b4b3-206a68c4e27a" class="">
+</p><p id="1f0ae37b-9fcf-49a7-b209-bb8d1a3d9036" class="">Task Achievement: 8</p><p id="e8ff4a87-91fa-4044-8b86-d728c5c3445e" class="">Coherence and Cohesion:8</p><p id="ad5e712f-9d4e-4477-9809-f4ddef72fb80" class="">Lexical Resource: 8</p><p id="9f9085ea-df4c-4609-9453-85f1350c5333" class="">Grammatical Range and Accuracy: 8</p><p id="25a87458-52ca-454f-8a9a-2ae5a998bc5f" class=""><strong>Overall: 8</strong></p><p id="ef9696ed-f519-48b5-a6d9-94a3a647330e" class="">
+</p></div></div><p id="a655923b-b0e0-452c-a145-f8e712813fe1" class="">
+</p></div></article></body></html>
